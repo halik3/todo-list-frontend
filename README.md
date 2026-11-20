@@ -1,16 +1,30 @@
-# React + Vite
+# ToDo List API (Backend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+REST API untuk mengelola daftar tugas harian. Dibangun dengan FastAPI, SQLAlchemy, dan PostgreSQL (Neon). Menerapkan prinsip SOLID untuk kode yang terstruktur.
 
-Currently, two official plugins are available:
+## 🚀 Teknologi
+- **Framework**: FastAPI (Python)
+- **ORM**: SQLAlchemy
+- **Database**: PostgreSQL (Neon Serverless)
+- **Testing**: Pytest
+- **Deployment**: Railway (Docker)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Fitur
+- Membuat task baru
+- Melihat seluruh task
+- Melihat task berdasarkan ID
+- Memperbarui task (judul/deskripsi)
+- Menghapus task
+- Menandai task selesai (toggle status)
 
-## React Compiler
+## 🛠️ Prasyarat
+- Python 3.11+
+- PostgreSQL (lokal atau Neon)
+- Docker (opsional, untuk containerization)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Cara Menjalankan di Lokal
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone repositori & masuk ke folder:**
+   ```bash
+   git clone https://github.com/halik3/todo-list-backend.git
+   cd todo-list-backend

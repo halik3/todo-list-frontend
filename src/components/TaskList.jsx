@@ -1,11 +1,15 @@
 import TaskItem from "./TaskItem";
 
-export default function TaskList({ tasks, onToggle, onDelete }) {
+export default function TaskList({ tasks, onToggle, onDelete, onUpdate }) {
   if (!tasks || tasks.length === 0) {
     return (
-      <p className="text-center text-gray-500 py-8">
-        Belum ada task. Yuk tambah task pertama Anda!
-      </p>
+      <div className="text-center py-12">
+        <div className="text-6xl mb-3">📭</div>
+        <p className="text-brand-600 font-medium">Belum ada task.</p>
+        <p className="text-brand-400 text-sm mt-1">
+          Yuk tambah task pertama Anda di atas!
+        </p>
+      </div>
     );
   }
 
@@ -17,6 +21,7 @@ export default function TaskList({ tasks, onToggle, onDelete }) {
           task={task}
           onToggle={onToggle}
           onDelete={onDelete}
+          onUpdate={onUpdate}   /* ⬅️ PROP INI WAJIB ADA */
         />
       ))}
     </ul>
