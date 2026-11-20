@@ -122,14 +122,17 @@ export default function App() {
       <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob" style={{ animationDelay: '4000ms' }}></div>
 
       <div className="max-w-2xl mx-auto relative z-10">
-        <header className="mb-10 text-center">
+         <header className="mb-10 text-center">
           <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600 flex items-center justify-center gap-3 drop-shadow-sm">
-            <span className="text-5xl">📝</span>
+            {/* Logo SVG Clipboard/Checklist */}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-10 text-brand-500">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 2.25v3.75a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75V2.25m3 7.5h-6m6 3h-6m3 3h-3" />
+            </svg>
             ToDo List
           </h1>
           <p className="text-brand-600/80 mt-2 font-medium">Kelola tugas harian Anda dengan elegan</p>
         </header>
-
            <div className="bg-white/40 backdrop-blur-2xl rounded-3xl shadow-glass border border-white/60 p-5 sm:p-7">
           <TaskForm onSubmit={handleCreate} />
 
